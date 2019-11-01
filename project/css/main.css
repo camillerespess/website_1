@@ -1,0 +1,112 @@
+html {
+    font-size: 100%;
+    box-sizing: border-box;
+}
+* {
+    box-sizing: inherit;
+}
+body {
+    font-family: Raleway, Calibri, Arial, sans-serif;
+    background: #68ABB3;
+    color: #333;
+    margin: 0;
+    padding: 2rem;
+}
+h1, h2 {
+    font-family: Lora, Georgia, Palatino, serif;
+}
+h1 {
+  font-size: 3rem;
+}
+
+img {
+    display: block;
+    width: 100%;
+  }
+
+  #container {
+    max-width: 1280px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(4, auto);
+    grid-template-areas:
+    "header header header header header"
+    "forest forest thepark thepark thepark"
+    "arch arch gateway gateway gateway"
+    "footer footer footer footer footer";
+  }
+
+header {
+      grid-area: header;
+      background: #fff;
+      text-align: center;
+      padding: 2rem;
+      margin-bottom: 1rem;
+    }
+
+#forest {
+    grid-area: forest;
+    margin: 0rem 1rem 1rem 0rem;
+    }
+
+#thepark {
+    grid-area: thepark;
+    background: #FFD0AD;
+    padding: 2rem;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  #arch {
+  grid-area: arch;
+  margin: 0rem 1rem 1rem 0rem;
+}
+
+.rotate-left {
+  transform: rotate(-5deg);
+}
+
+  #gateway {
+      grid-area: gateway;
+      background: #FFD0AD;
+      padding: 2rem;
+      font-size: 1rem;
+      margin-bottom: 1rem;
+    }
+
+  footer {
+    grid-area: footer;
+  }
+
+@media screen and (max-width: 730px) {
+      #container {
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(6, auto);
+        grid-template-areas:
+        "header"
+        "forest"
+        "thepark"
+        "arch"
+        "gateway"
+        "footer";
+      }
+
+      h1 {
+        font-size: 1.5rem;
+      }
+
+      h2 {
+        font-size: 1rem;
+      }
+
+      #arch {
+      grid-area: arch;
+      margin: 0rem 0rem 1rem 0rem;
+    }
+
+      #forest {
+          grid-area: forest;
+          margin: 0rem 0rem 1rem 0rem;
+          }
+    } 
